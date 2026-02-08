@@ -8,6 +8,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const projectRoutes = require('./routes/projectRoutes');
+const taskRoutes = require('./routes/taskRoutes');     
+
+app.use('/api/projects', projectRoutes);
+app.use('/api/tasks', taskRoutes);   
+
 // Basic Route to test
 app.get('/', (req, res) => {
     res.json({ message: "Welcome to our Group API project!" });
