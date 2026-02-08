@@ -23,6 +23,12 @@ app.get('/', (req, res) => {
     res.json({ message: "Welcome to our Group API project! Auth & CRUD are ready." });
 });
 
+// Gestionnaire d'erreurs global 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Quelque chose a mal tourné sur le serveur !' });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
