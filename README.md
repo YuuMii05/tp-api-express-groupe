@@ -144,7 +144,7 @@ L'API a été validée via curl et Postman. Pour tester les routes protégées, 
 
 ---
 
-*<div id="workflow"></div>
+<div id="workflow"></div>
 
 > ### Guide d'Utilisation (Workflow)
 Pour tester l'intégralité du flux de travail, suivez ces étapes :  
